@@ -11,23 +11,18 @@ class Window(Frame):
 
     def init_window(self):
 
+        self.pack(fill = BOTH, expand = True)
+
         # Title of window
         self.master.title('Automated Gait Generation for Simulated Machines')
-
-        # Widget takes full space
-        self.pack(fill = BOTH, expand = 1)
-
         # Create a button
         train_button = Button(self, text = "Train", command = self.train_env)
-
         # Placing the button on my window
-        train_button.place(x = 0, y = 0)
-
+        train_button.grid(row = 1, column = 0)
         # Create a button
         render_button = Button(self, text = "Render", command = self.render_env)
-
         # Placing the button on my window
-        render_button.place(x = 20, y = 0)
+        render_button.grid(row = 1, column = 5)
 
     def train_env(self):
         exit()
