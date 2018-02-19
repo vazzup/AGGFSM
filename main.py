@@ -2,6 +2,10 @@
 
 from tkinter import *
 
+from threading import Thread
+
+from other import main1
+
 class Window(Frame):
 
     def __init__(self, master=None):
@@ -30,6 +34,8 @@ class Window(Frame):
         render_button.place(x = 20, y = 0)
 
     def train_env(self):
+        thread = Thread(target = main1)
+        thread.start() # This code will execute in parallel to the current code 
         exit()
 
     def render_env(self):
